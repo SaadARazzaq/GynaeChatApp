@@ -7,6 +7,9 @@ import { RouterProvider } from 'react-router-dom';
 import router from './rotues';
 import { Provider } from 'react-redux'
 import { store } from './redux/store';
+import { disableReactDevTools } from '@fvilers/disableReactDevTools';
+
+if (process.env.NODE_ENV === 'production') disableReactDevTools()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
